@@ -18,8 +18,8 @@
     <title>Studio</title>
   </head>
   <body>
-    <header class="header-container">
-      <div class="container nav-flex">
+    <header class="header-container container">
+      <div class=" nav-flex">
         <nav class="nav-container">
           <a class="nav-logo link" href="./index.html"
             >Web<span class="logo-span-header">Studio</span></a
@@ -59,9 +59,9 @@
         </address>
       </div>
       <div class="mobile-menu container js-menu-container">
-        <button class="mobile-menu-close-btn js-close-menu" type="button">
-          <svg class="mobile-menu-close-icon"  width="24" height="24">
-            <use width="8" height="8" href="./images/icons.svg#icon-button"></use>
+        <button class="mobile-menu-close-btn js-close-menu" type="button" aria-expanded="false">
+          <svg class="mobile-menu-close-icon"  width="8" height="8">
+            <use href="./images/icons.svg#icon-button"></use>
           </svg>
         </button>
         <ul class="mobile-menu-list list">
@@ -204,6 +204,7 @@
           <ul class="section-three-list list">
             <li class="section-three-item">
               <img
+              srcset="./images/img1@2x.jpg 2x"
                 src="./images/img1.jpg"
                 alt="screen of the computer"
                 width="360"
@@ -211,6 +212,7 @@
             </li>
             <li class="section-three-item">
               <img
+              srcset="./images/img2@2x.jpg 2x"
                 src="./images/img2.jpg"
                 alt="screen of smartphone"
                 width="360"
@@ -218,6 +220,7 @@
             </li>
             <li class="section-three-item">
               <img
+              srcset="./images/img3@2x.jpg 2x"
                 src="./images/img3.jpg"
                 alt="picture of smartphone and computer"
                 width="360"
@@ -232,7 +235,12 @@
           <h2 class="section-four-title">Our Team</h2>
           <ul class="section-four-list list">
             <li class="section-four-item">
-              <img src="./images/foto1.jpg" alt="foto of man" width="264" />
+              <picture>
+                <source media="(min-width:428px)" srcset="./images/team1-m.jpg 1x, ./images/team1-m@2x.jpg 2x">,
+                <source media="(min-width:768px)" srcset="./images/team1-t.jpg 1x, ./images/team1-t@2x.jpg 2x">,
+                <source media="(min-width:1158px)" srcset="./images/foto1.jpg 1x, ./images/foto1@2x.jpg 2x">
+                <img src="./images/foto1.jpg" alt="foto of man" width="264" />
+              <!-- </picture> -->
               <div class="decoration">
                 <h3 class="section-four-name">Mark Guerrero</h3>
                 <p class="section-four-text">Product Designer</p>
@@ -270,7 +278,12 @@
               </div>
             </li>
             <li class="section-four-item">
-              <img src="./images/foto2.jpg" alt="foto of man" width="264" />
+              <picture>
+                <source media="(min-width:428px )" srcset="./images/team2-m.jpg 1x, ./images/team2-m@2x.jpg 2x">
+                <source media="(min-width:768px )" srcset="./images/team2-t.jpg 1x, ./images/team2-t@2x.jpg 2x">
+                <source media="(min-width:1158px )" srcset="./images/foto2.jpg 1x, ./images/foto2@2x.jpg 2x">
+                <img src="./images/foto2.jpg" alt="foto of man" width="264" />
+              </picture>
               <div class="decoration">
                 <h3 class="section-four-name">Tom Ford</h3>
                 <p class="section-four-text">Frontend Developer</p>
@@ -308,7 +321,13 @@
               </div>
             </li>
             <li class="section-four-item">
-              <img src="./images/foto3.jpg" alt="foto of women" width="264" />
+              <picture>
+                <source media="(min-width:428px )" srcset="./images/team3-m.jpg 1x, ./images/team3-m@2x.jpg 2x">
+                <source media="(min-width:768px )" srcset="./images/team3-t.jpg 1x, ./images/team3-t@2x.jpg 2x">
+                <source media="(min-width:1158px )" srcset="./images/foto3.jpg 1x, ./images/foto3@2x.jpg 2x">
+                <img src="./images/foto3.jpg" alt="foto of women" width="264" />
+              </picture>
+
               <div class="decoration">
                 <h3 class="section-four-name">Camila Garcia</h3>
                 <p class="section-four-text">Marketing</p>
@@ -346,7 +365,13 @@
               </div>
             </li>
             <li class="section-four-item">
-              <img src="./images/foto4.jpg" alt="foto of man" width="264" />
+              <picture>
+                <source media="(min-width:428px )" srcset="./images/team4-m.jpg 1x, ./images/team4-m@2x.jpg 2x">
+                <source media="(min-width:768px )" srcset="./images/team4-t.jpg, ./images/team4-t@2x.jpg 2x">
+                <source media="(min-width:1158px )" srcset="./images/foto4.jpg 1x, ./images/foto4@2x.jpg 2x">
+                <img src="./images/foto4.jpg" alt="foto of man" width="264" />
+              </picture>
+
               <div class="decoration">
                 <h3 class="section-four-name">Daniel Wilson</h3>
                 <p class="section-four-text">UI Designer</p>
@@ -440,7 +465,9 @@
     <!-- Footer -->
     <footer class="footer-container">
       <div class="container footer">
+        <div class="tablet-footer">
         <div class="footer-logo-container">
+         
           <a class="nav-logo footer-logo link" href="./index.html"
             >Web<span class="logo-span-footer">Studio</span></a
           >
@@ -482,6 +509,8 @@
               </a>
             </li>
           </ul>
+        </div>
+
         </div>
         <div class="footer-subscribe">
           <p class="footer-subscribe-text">Subscribe</p>
