@@ -350,10 +350,9 @@ header {
 
 .mobile-menu-social-list {
     display: flex;
+    justify-content: left;
     align-items: center;
     gap: 56px;
-    margin-left: 0;
-    margin-right: 15px;
 }
 
 .mobile-menu,
